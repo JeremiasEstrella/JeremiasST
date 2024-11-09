@@ -1,0 +1,193 @@
+/* Estilos para pantallas pequeñas */
+@media (max-width: 750px) {
+
+    header{
+        height: 120px;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .conticon {
+            width: 200px;
+            height: 80px;
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+        
+    }
+    
+    
+    .icono_circulo i{
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+       
+    }
+    .imagenlogo {
+        margin-left: 100px;
+    }
+    
+    
+        nav {
+            margin-top: 100px;
+           height: 250px;
+            display: none; /* Oculta el menú por defecto */
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            background-color: var(--azuloscuro);
+        }
+    
+        nav.show-menu {
+            display: flex; /* Muestra el menú cuando se activa */
+        }
+    
+        nav a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid var(--amarillo);
+        }
+    
+    
+        .c1{
+            width: 600px;
+            height: 500px;
+            background-color: aqua;
+        }
+        .banner{
+            width: 100px;
+           margin-left: -20px;
+        }
+
+        .banner2 img{
+            width: 600px;
+            height: 500px;
+
+        }
+
+        .c3{
+            text-align: center;
+            width: 500px;
+            height: 1230px;
+        }
+        .serviciotext{
+            width: 400px;
+            height: 400px;
+
+        }
+        .servicio{
+            width: 300px;
+            height:230px;
+        }
+
+       .contenedor-servicios{
+        display: flex;
+        justify-content: center;
+       }
+
+
+
+       .whatsapp-float {
+        bottom: 40px;
+        right: 100px;
+    
+    }
+    
+
+#mod1 .icono-servicio,
+#mod2 .icono-servicio,
+#mod3 .icono-servicio {
+    color: white;
+    transform: scale(1.1);
+}
+
+
+#mod1 p, 
+#mod2 p,
+#mod3 p {
+    color: white;
+    transform: scale(1.1);
+}
+
+
+#mod1 h3, 
+#mod2 h3,
+#mod3 h3 {
+    color: white;
+    transform: scale(1.1);
+}
+
+#mod1 {
+    background: var(--rojo2);
+    transform: translateY(-8px);
+    color: white;
+}
+
+#mod2 {
+    background: var(--verde2);
+    transform: translateY(-8px);
+    color: white;
+}
+
+#mod3 {
+    background: var(--azul2);
+    transform: translateY(-8px);
+    color: white;
+
+}
+    
+
+.c2{
+    height: 500px;
+}
+.primercontvid{
+    width:350px ;
+    height: 200px;
+   
+}
+
+.seguncontvid{
+    width:400px ;
+    height: 250px;
+
+}
+
+
+.strella{
+    width: 50px;
+    height: 50px;
+}
+
+.strella img{
+    width: 200px;
+}
+
+
+
+
+.c4{
+
+    width: 400px;
+    align-items: center;
+    height: 1200px;
+ 
+}
+
+.portfolio-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+    }
+    
+    
