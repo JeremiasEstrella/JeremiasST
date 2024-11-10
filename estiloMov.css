@@ -59,7 +59,7 @@
         }
     
         nav a {
-            width: 150%;
+            width: 120%;
             text-align: center;
             display: block;
             padding: 10px 50px;
@@ -170,7 +170,7 @@
 
     width: 400px;
     align-items: center;
-    height: 1200px;
+    height: 1600px;
  
 }
 
