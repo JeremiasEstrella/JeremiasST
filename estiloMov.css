@@ -166,13 +166,6 @@
 
 
 
-.c4{
-
-    width: 400px;
-    align-items: center;
-    height: 1600px;
- 
-}
 
 .portfolio-container {
     flex-direction: column;
@@ -189,7 +182,10 @@
 }
 
 .c4{
-    height: 3650px;
+    
+    width: 400px;
+    align-items: center;
+    height: 3700px;
 }
 
 .c4 p{
