@@ -62,7 +62,7 @@
             width: 150%;
             text-align: center;
             display: block;
-            padding: 10px 70px;
+            padding: 10px 60px;
             border-bottom: 2px solid var(--amarillo);
             background-color: var(--azuloscuro);
             
@@ -72,7 +72,7 @@
     
 
         .c3{
-            height: 1600px;
+            height: 1500px;
         }
         .recursos{
             margin-right: 100px;
@@ -189,7 +189,7 @@
 }
 
 .c4{
-    height: 3450px;
+    height: 3550px;
 }
 
 .c4 p{
