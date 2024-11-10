@@ -1,5 +1,9 @@
+
+
+
+
 /* Estilos para pantallas pequeñas */
-@media (max-width: 750px) {
+@media (max-width:680px) {
 
     header{
         height: 120px;
@@ -7,6 +11,7 @@
         margin: auto;
         align-items: center;
         justify-content: center;
+   
     }
     
     .conticon {
@@ -46,51 +51,47 @@
         }
     
         nav.show-menu {
-            display: flex; /* Muestra el menú cuando se activa */
+            display: flex; 
+            z-index: 9;/* Muestra el menú cuando se activa */
         }
     
         nav a {
+            text-align: center;
             display: block;
-            padding: 10px;
-            border-bottom: 1px solid var(--amarillo);
+            padding: 10px 100px;
+            border-bottom: 2px solid var(--amarillo);
         }
     
     
-        .c1{
-            width: 600px;
-            height: 500px;
-            background-color: aqua;
-        }
-        .banner{
-            width: 100px;
-           margin-left: -20px;
-        }
-
-        .banner2 img{
-            width: 600px;
-            height: 500px;
-
-        }
 
         .c3{
-            text-align: center;
-            width: 500px;
-            height: 1230px;
+            height: 1400px;
         }
-        .serviciotext{
-            width: 400px;
-            height: 400px;
 
+        .recursos img{
+            width: 30px;
         }
+
+        .banner-content h1{
+            font-size: 30px;
+
+            
+        }
+
+      
+        
         .servicio{
             width: 300px;
             height:230px;
         }
 
        .contenedor-servicios{
+        height: 1100px;
         display: flex;
+        margin-top: 30px;
         justify-content: center;
-       }
+
+    }
 
 
 
@@ -101,51 +102,19 @@
     }
     
 
-#mod1 .icono-servicio,
-#mod2 .icono-servicio,
-#mod3 .icono-servicio {
-    color: white;
-    transform: scale(1.1);
-}
+    .whatsapp-float {
+        width: 30px;
+        height: 30px;
+    }
 
+    .whatsapp-float i{
+        font-size: 20px;
+    }
 
-#mod1 p, 
-#mod2 p,
-#mod3 p {
-    color: white;
-    transform: scale(1.1);
-}
-
-
-#mod1 h3, 
-#mod2 h3,
-#mod3 h3 {
-    color: white;
-    transform: scale(1.1);
-}
-
-#mod1 {
-    background: var(--rojo2);
-    transform: translateY(-8px);
-    color: white;
-}
-
-#mod2 {
-    background: var(--verde2);
-    transform: translateY(-8px);
-    color: white;
-}
-
-#mod3 {
-    background: var(--azul2);
-    transform: translateY(-8px);
-    color: white;
-
-}
     
 
 .c2{
-    height: 500px;
+   height: 600px;
 }
 .primercontvid{
     width:350px ;
@@ -188,6 +157,42 @@
 
 
 
-    }
+.c5{
+    height: 450px;
+    margin-top: 20px;
+
+}
+
+.c4{
+    height: 3300px;
+}
+
+.contproyectosweb{
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contproyweb{
+    margin-top: 80px;
+}
+
+.iconos2{
+    width: 400px;
+    margin: auto;
+}
+
+
+.iconos2 a {
+   padding: 10px; /* Espaciado alrededor del texto */
+
+}
+footer{
+    text-align: center;
+}
+
+
+
+}
     
     
