@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--azulmarino), var(--azuloscuro));
+}
+
+.primerconacer {
+  width: 100%;
+  height: auto;
+  display: grid;
+  margin: auto;
+  padding: 10px;
+  background-color: var(--azuloscuro);
+}
+.parent {
+  background-color: var(--azuloscuro);
+  width: 58%;
+  height: auto;
+  display: grid;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.div9 {
+  padding: 5px;
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.div9 p {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--blanco);
+}
+
+.imagenperfil {
+  background-color: var(--azulmarino);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.cshar {
+  width: 69%;
+  height: auto;
+}
+
+.linea-vertical {
+  width: 0.3%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background: #fff;
+  color: white;
+}
+
+.div10 {
+  margin-left: 10px;
+  width: 75%;
+  height: 60%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: auto;
+  padding: 20px;
+  margin-left: 10px;
+}
+.textoacerca {
+  width: 32%;
+  display: grid;
+  margin: auto;
+  padding: 2px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.textoacerca h2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+}
+
+.textoacerca h2 i {
+  color: var(--amarillo); /* o tu color principal */
+  font-size: 18px;
+}
+
+.textoacerca p img {
+  vertical-align: middle;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+.iconosper {
+  width: 100%;
+  margin: auto;
+  height: 25px;
+  margin-top: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.ico {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--blanco);
+  margin: 10px;
+}
+
+.ico:hover {
+  color: var(--amarillo);
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.linea {
+  width: 100%;
+  margin: auto;
+  background: var(--azuloscuro);
+}
+.timeline-section {
+  width: 40%;
+  margin: auto;
+  padding: 60px 20px;
+  color: var(--blanco);
+}
+
+.timeline-section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 32px;
+}
+
+.timeline-section h2 i {
+  color: #f1c40f;
+  margin-right: 10px;
+}
+
+.titulo-resumen {
+  font-size: 28px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 30px;
+  border-left: 2px dashed #f1c40f;
+  padding-left: 44px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item .dot {
+  position: absolute;
+  left: -51px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #f1c40f;
+  border-radius: 50%;
+}
+
+.content h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.fecha {
+  color: #f1c40f;
+  font-size: 14px;
+}
+
+.content h4 {
+  font-size: 15px;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cfd8dc;
+}
+
+.skills {
+  background-color: var(--azuloscuro);
+  width: 100%;
+  color: var(--blanco);
+}
+
+.titulolenguaje {
+  text-align: center;
+  font-size: 18px;
+  margin: auto;
+  padding: 20px;
+  color: gray;
+}
+.skillsinfo {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+}
+
+.contleng {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.iconleng {
+  font-size: 40px;
+  color: var(--blanco);
+}
+
+.imagenleng {
+  width: 70px;
+  height: 70px;
+  background-color: var(--azulmarino);
+  border-radius: 5px;
+  margin: auto;
+  margin: 20px;
+  text-align: center;
+}
+
+.imagenleng img {
+  width: 100%;
+  height: 100%;
+}
+
+.textleng p {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+}

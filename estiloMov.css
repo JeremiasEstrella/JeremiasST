@@ -1,0 +1,269 @@
+/* Estilos para pantallas pequeñas */
+@media (max-width: 550px) {
+  header {
+    height: 120px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .conticon {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .icono_circulo {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagenlogo {
+    width: 200px;
+  }
+
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--azuloscuro);
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 500;
+  }
+
+  nav.show-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 10px 50px;
+    border-bottom: 2px solid var(--amarillo);
+    background-color: var(--azuloscuro);
+  }
+
+  header {
+    position: relative;
+  }
+
+  .conticon {
+    display: flex;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  nav.show-menu {
+    pointer-events: auto;
+  }
+
+  .c3 {
+    height: auto;
+  }
+  .recursos {
+    margin-right: 100px;
+  }
+
+  .recursos img {
+    width: 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 20px;
+  }
+  .banner-content p {
+    font-size: 12px;
+  }
+
+  .banner .btn {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+
+  .serviciotext {
+    height: 320px;
+    width: 350px;
+    text-align: center;
+  }
+
+  .servicio {
+    width: 200px;
+    height: 230px;
+  }
+
+  .contenedor-servicios {
+    height: auto;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .whatsapp-float {
+    width: 35px;
+    height: 33px;
+  }
+
+  .whatsapp-float i {
+    font-size: 20px;
+  }
+
+  .seguncontvid {
+    width: 400px;
+    height: 250px;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .c4 {
+    width: 100%;
+    align-items: center;
+    height: auto;
+  }
+
+  .c4 p {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .contproyectosweb {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contproyweb {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .contproyweb {
+    width: 70%;
+    height: 400px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .contproyweb figure {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Opcional: Estilos para el overlay */
+  .portfolio-overla2 {
+    width: 90%;
+    height: 83%;
+    top: 0px;
+    left: 5%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .iconos2 {
+    width: 100%;
+    margin: auto;
+  }
+
+  .iconos2 a {
+    padding: 10px; /* Espaciado alrededor del texto */
+  }
+  footer {
+    text-align: center;
+  }
+
+  .titulo2 {
+    font-size: 29px;
+  }
+
+  .primerconacer {
+    flex-wrap: wrap;
+  }
+  .parent {
+    flex-wrap: wrap;
+  }
+
+  .div9 {
+    padding: 5px;
+    width: 100%;
+  }
+
+  .cshar {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .div10 {
+    gap: 20px;
+  }
+  .textoacerca {
+    text-align: center;
+    width: 100%;
+    display: grid;
+    margin: auto;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .textoacerca h2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+  }
+
+  .textoacerca h2 i {
+    color: var(--amarillo); /* o tu color principal */
+    font-size: 18px;
+  }
+
+  .textoacerca p img {
+    vertical-align: middle;
+    margin-right: 6px;
+    border-radius: 2px;
+  }
+
+  .iconosper {
+    width: 100%;
+    margin: auto;
+    height: 25px;
+    margin-top: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .ico {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--blanco);
+    margin: 10px;
+  }
+
+  .ico:hover {
+    color: var(--amarillo);
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+}
