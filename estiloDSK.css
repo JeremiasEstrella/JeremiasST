@@ -3,21 +3,15 @@
     --azulmarino:#08314A;
     --amarillo:#F7E466;
     --amarillo2:#FAAF3B;
-
     --verde:#09D77D;
     --verde2:#00A945;
-
     --rojo:#FD5660;
     --rojo2:#D4145A;
-
     --azul:#0CD3C7; 
     --azul2:#00A99D;
-    
     --naranja:#FD9244;
     --naranja2:#F15A24;
-    
     --blanco:#ffffff;
-
     --tetsborder: 4px rgb(15, 220, 15) solid;
 }
 
@@ -41,12 +35,12 @@ header {
     justify-content: center;
     background: linear-gradient(to bottom, var(--azulmarino), var(--azuloscuro));
 }
+
 .icono_circulo i{
     color: white;
     margin-bottom: 40px;
 }
 
-/* Estilos de navegación para pantallas grandes */
 nav { 
     margin: auto;
     display: flex;
@@ -88,7 +82,6 @@ nav a {
 
 .anchoopciones{
     max-width: 600px;
-
     margin: auto;
     text-align: right;
 }
@@ -103,13 +96,12 @@ nav a {
 
 .whatsapp-float {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 300px;
-    right: 100px;
+    width: 50px;
+    height: 50px;
+    bottom:100px;
+    right:0px;
     background-color: #25d366;
     color: #FFF;
-    border-radius: 50px;
     text-align: center;
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
@@ -130,18 +122,10 @@ nav a {
 
 
 
-.c1{
-    width: 1300px;
-    height: 480px;
-    color: var(--verde);
-    margin: auto;
-    position: relative;
-    
- }
 
 .banner {
     margin-left: 30px;
-    width: 1000px;
+    width: 100% ;
     max-width: 1600px;
     margin:start;
     z-index: 3;
@@ -181,7 +165,6 @@ font-family: impact;
     margin-top: 10px;
     color: var(--azuloscuro);
     text-decoration: none;
-   
 }
 
 .iconos a:hover{
@@ -204,8 +187,6 @@ font-family: impact;
 .verde{
     background-color: var(--rojo2);
     border-radius: 20px;
-   
-    
 }
 .azul{
     background-color: var(--naranja);
@@ -255,14 +236,17 @@ font-family: impact;
 
 
 .c3{
-    height:470px;
+    width: 100%;
+    height:auto;
     margin: auto;
     margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .serviciotext{
     max-width: 1000px;
-    height: 200px;
+    height: 180px;
     margin: auto;
 }
 
@@ -317,7 +301,6 @@ font-family: impact;
     animation-delay: 0.8s;
 }
 
-/* Keyframes para la animación de deslizamiento y desvanecimiento */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -329,14 +312,17 @@ font-family: impact;
     }
 }
 
+/*-------------------*/
+/*-------------------*/
+/* PRIMER CONTENEDOR */
+/*-------------------*/
+/*-------------------*/
 
-/* Contenedor principal */
-/* Contenedor principal */
 .contenedor-servicios {
-    height: 280px; 
-    width: 80%;
+    height: auto; 
+    width: 70%;
     max-width: 1200px;
-    display: flex;               /* Activar flexbox */
+    display: flex;              
     justify-content: center;      /* Alinear elementos al centro horizontalmente */
     align-items: center; 
     margin-top: 10px;
@@ -348,7 +334,7 @@ font-family: impact;
     text-align: center;
              /* Alinear elementos al centro verticalmente (opcional) */
     flex-wrap: wrap;              /* Hace que los elementos se acomoden en filas si hay espacio */
-    gap: 20px;                   /* Espacio entre elementos */
+    gap: 10px;                   /* Espacio entre elementos */
 }
 
 
@@ -810,107 +796,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-
-footer {
-    height: 150px;
-    background-color: var(--azuloscuro); /* Color de fondo */
-    color: var(--blanco); /* Color de texto */
-    padding: 20px; /* Espaciado interno */
-    text-align: right; /* Centra el texto */
-}
-
-footer p {
-    margin-right: 40px;
-    margin-bottom: 15px; /* Espaciado entre el texto y los iconos */
-    font-size: 18px; /* Tamaño de fuente */
-    font-weight: 600; /* Negrita */
-
-}
-
-.iconos2 {
-    max-width: 1200px;
-    display: flex; /* Utiliza flexbox para alinear los iconos */
-    justify-content: right; /* Centra los iconos */
-    gap: 20px; /* Espacio entre los iconos */
-}
-
-.iconos2 a {
-    color: var(--blanco); /* Color de texto de los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    padding: 10px; /* Espaciado alrededor del texto */
-    border-radius: 4px; /* Esquinas redondeadas */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
-}
-
-.iconos2 a:hover {
-    transform: translateY(-3px); /* Efecto de movimiento al pasar el mouse */
-}
-
-.rojo2:hover {
-    background-color: var(--rojo); /* Color de fondo al pasar el mouse */
-}
-
-.verde2:hover {
-    background-color: var(--verde); /* Color de fondo al pasar el mouse */
-}
-
-.azul2:hover {
-    background-color: var(--azul); /* Color de fondo al pasar el mouse */
-}
-
-
-.rojo2{
-    background-color: var(--azul);
-    border-radius: 20px;
-}
-
-.verde2{
-    background-color: var(--rojo2);
-    border-radius: 20px;
-   
-    
-}
-.azul2{
-    background-color: var(--verde2);
-    border-radius: 20px;
-    font-size: 12px;
-}
-
-.iconos2{
-    
-    width: 1200px;
-    text-align: center;
-    z-index: 0;
-   
-}
-.iconos2 a{
-    font-family: impact;
-    padding: 10px 15px;
-    margin-top: 10px;
-    color: var(--azuloscuro);
-    text-decoration: none;
-    margin-top: 20px;
-    text-align: center;
-   
-}
-
-.iconos2 a:hover{
-    background-color: var(--amarillo2);
-}
-.iconos2 i{
-    font-size: 20px;
-    margin: auto;
-    border-radius: 100%;
-    color: rgb(16, 11, 11);
-    z-index: 0;
-}
-
 /* Estilos para el banner */
 .banner {
     width: 100%;
     height: 60vh;
     background: linear-gradient(to right, rgba(6, 9, 57, 0.2), rgba(0, 0, 0, 0.2)), 
-                url('Banner.jpg') center/cover no-repeat; /* Reemplaza con la URL de tu imagen */
+                url('imagenes/Banner.jpg') center/cover no-repeat; /* Reemplaza con la URL de tu imagen */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1040,22 +931,6 @@ footer p {
     justify-content: center; 
 }
 
-
-.strella{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.strella img{
-    width: 300px;
-}
-
-
-
 .animateslideleft {
     opacity: 0;
 }
@@ -1120,3 +995,95 @@ footer p {
         border-radius: 5px;
         cursor: pointer;
       }
+
+      
+
+
+footer {
+    height: auto;
+    background-color: var(--azuloscuro); /* Color de fondo */
+    color: var(--blanco); /* Color de texto */
+    padding: 10px; /* Espaciado interno */
+    align-items: right;
+    text-align: right;
+    z-index: 0;
+}
+
+footer p {
+    margin-bottom: 15px; /* Espaciado entre el texto y los iconos */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: 600; /* Negrita */
+
+}
+
+.iconos2 {
+    width: 100%;
+    height: auto;
+    align-items: right;
+    text-align: right;
+   display: flex; /* Utiliza flexbox para alinear los iconos */
+    justify-content: right;
+    gap: 10px; /* Espacio entre los iconos */
+}
+
+.iconos2 a {
+    color: var(--blanco); /* Color de texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px; /* Espaciado alrededor del texto */
+    border-radius: 4px; /* Esquinas redondeadas */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+.iconos2 a:hover {
+    transform: translateY(-3px); /* Efecto de movimiento al pasar el mouse */
+}
+
+.rojo2:hover {
+    background-color: var(--rojo); /* Color de fondo al pasar el mouse */
+}
+
+.verde2:hover {
+    background-color: var(--verde); /* Color de fondo al pasar el mouse */
+}
+
+.azul2:hover {
+    background-color: var(--azul); /* Color de fondo al pasar el mouse */
+}
+
+
+.rojo2{
+    background-color: var(--azul);
+    border-radius: 20px;
+}
+
+.verde2{
+    background-color: var(--rojo2);
+    border-radius: 20px;
+   
+    
+}
+.azul2{
+    background-color: var(--verde2);
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+.iconos2 a{
+    font-family: impact;
+    padding: 10px 15px;
+    color: var(--azuloscuro);
+    text-decoration: none;
+    text-align: center;
+   
+}
+
+.iconos2 a:hover{
+    background-color: var(--amarillo2);
+}
+.iconos2 i{
+    font-size: 20px;
+    border-radius: 100%;
+    color: rgb(16, 11, 11);
+    z-index: 0;
+}
