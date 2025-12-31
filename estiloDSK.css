@@ -245,8 +245,8 @@ font-family: impact;
 }
 
 .serviciotext{
-    max-width: 1000px;
-    height: 180px;
+    max-width:80%;
+    height: auto;
     margin: auto;
 }
 
@@ -284,10 +284,13 @@ font-family: impact;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1.5s ease forwards;
+    margin-bottom: 10px;
+    gap: 10px;
 }
 
 /* Animación de entrada para cada párrafo y el título */
 .serviciotext h1 {
+    margin: auto;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s ease forwards;
@@ -321,7 +324,6 @@ font-family: impact;
 .contenedor-servicios {
     height: auto; 
     width: 70%;
-    max-width: 1200px;
     display: flex;              
     justify-content: center;      /* Alinear elementos al centro horizontalmente */
     align-items: center; 
