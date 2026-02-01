@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeremiasST - Contáctanos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="estiloDSK.css">
+    <link rel="stylesheet" href="estiloMov.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="anchonav">
+            <div class="imagenlogo">
+                <figure class="logo">
+                     <a href="index.html"><img src="imagenes/Logo Horizontal.png" alt="Logo"></a>
+                </figure>
+            </div>
+            <div class="conticon">
+              <div class="pmenu"></div>
+              <div class="icono_circulo" id="icono_menu">
+                  <i class="fas fa-bars"></i>
+              </div>
+             </div>
+            <nav>
+                <div class="anchoopciones">
+                    <a href='index.html'>Inicio</a>
+                    <a href='branding.html'>Logo</a>
+                    <a href='portafolio.html'>Portafolio</a>
+                    <a href='contactanos.html' class="active">Contáctanos</a>    
+                    <a href='acercade.html'>Acerca de mi</a>
+                </div>
+            </nav>   
+        </div>
+    </header>
+
+    <a href="https://wa.me/529901447266" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div class="contact-page-container">
+        <!-- Google Map with Minimalist Filter -->
+        <div class="contact-map animate">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119285.02384661852!2d-89.69976378411985!3d20.979391032128913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56710406856015%3A0x6b2cd1878d651a0b!2sM%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Form and Action -->
+        <div class="contact-form-wrapper animate">
+            <i class="fas fa-paper-plane floating-icon"></i>
+            <h1 class="titulo2">Contáctanos</h1>
+            <p>Estamos listos para hacer realidad tu proyecto. Envíanos un mensaje.</p>
+            
+            <div class="contact-details" style="margin-bottom: 20px; text-align: left; color: var(--azulmarino);">
+                <p><i class="fas fa-envelope"></i> Jeremiasestrella@hotmail.com</p>
+                <p><i class="fas fa-phone"></i> (+52) 9901447266</p>
+            </div>
+
+            <form id="contactForm" onsubmit="sendToEmail(event)">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" id="name" placeholder="Tu Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono / Email</label>
+                    <input type="text" id="contact" placeholder="Contacto" required>
+                </div>
+                <div class="form-group">
+                    <label>Mensaje</label>
+                    <textarea id="message" placeholder="Cuéntanos sobre tu idea..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Correo <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+         <p>Síguenos en nuestras redes sociales</p>
+        <div class="iconos2">
+            <a href="https://www.facebook.com/share/19EcPSj3zx/" class="rojo2 amarillo" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jeremiasst_desing/profilecard/?igsh=NWk3dHplcGp4eWVn" class="verde2 amarillo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:YesserJeremias@hotmail.com" class="azul2 amarillo" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script src="scriptanimacion.js"></script>
+    <script>
+        function sendToEmail(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const message = document.getElementById('message').value;
+            
+            const subject = `Nuevo mensaje del sitio web de ${name}`;
+            const body = `Nombre: ${name}%0D%0AContacto: ${contact}%0D%0AMensaje: ${message}`;
+            
+            window.location.href = `mailto:YesserJeremias@hotmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+    <div id="canvas-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background3d.js"></script>
+</body>
+</html>

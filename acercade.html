@@ -43,31 +43,22 @@
         <nav>
           <div class="anchoopciones">
             <a href="index.html">Inicio</a>
-            <a href="#">Logo</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Contactanos</a>
-            <a href="#">Acerca de mi</a>
+            <a href="branding.html">Logo</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="contactanos.html">Contactanos</a>
+            <a href="acercade.html" class="active">Acerca de mi</a>
           </div>
         </nav>
       </div>
     </header>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const iconoMenu = document.getElementById("icono_menu");
-        const menu = document.querySelector("nav");
 
-        iconoMenu.addEventListener("click", function () {
-          menu.classList.toggle("show-menu");
-        });
-      });
-    </script>
 
     <a href="https://wa.me/529901447266" class="whatsapp-float" target="_blank">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <section class="primerconacer">
+    <section class="primerconacer animate">
       <div class="parent">
         <div class="div9">
           <div class="imagenperfil">
@@ -137,7 +128,7 @@
 
     <div class="timeline">
 
-        <div class="timeline-item">
+        <div class="timeline-item animate">
             <span class="dot"></span>
             <div class="content">
                 <h3>Secundaria</h3>
@@ -150,7 +141,7 @@
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item animate">
             <span class="dot"></span>
             <div class="content">
                 <h3>Preparatoria</h3>
@@ -163,7 +154,7 @@
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item animate">
             <span class="dot"></span>
             <div class="content">
                 <h3>Universidad</h3>
@@ -177,7 +168,7 @@
             </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item animate">
             <span class="dot"></span>
             <div class="content">
                 <h3>Universidad</h3>
@@ -198,7 +189,7 @@
 
 
 
-<section class="skills">
+<section class="skills animate">
     <div class="skillsinfo">
     <h1> Skills</h1>
 
@@ -249,7 +240,7 @@
 
 
 
-<section class="skills">
+<section class="skills animate">
     <div class="skillsinfo">
     <h1> Adobe Family</h1>
     <div class="contleng">
@@ -287,6 +278,11 @@
         </div>
     </footer> 
   
+
+  <script src="scriptanimacion.js"></script>
+  <div id="canvas-container"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="background3d.js"></script>
   </body>
   
 </html>

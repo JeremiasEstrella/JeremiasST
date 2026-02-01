@@ -148,7 +148,17 @@ nav a {
     width: 1200px;
     height: 480px;
     z-index: 3;
-  
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind everything */
+    pointer-events: none; /* Let clicks pass through */
+    opacity: 0.6;
 }
 
 .iconos{
@@ -329,54 +339,62 @@ font-family: impact;
     align-items: center; 
     margin-top: 10px;
     margin: auto;
-    background: var(--blanco);
+    background: transparent; /* Changed from white to transparent to show 3D BG better behind? Or keep white. Let's keep white but maybe semi-transparent */
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     text-align: center;
              /* Alinear elementos al centro verticalmente (opcional) */
     flex-wrap: wrap;              /* Hace que los elementos se acomoden en filas si hay espacio */
-    gap: 10px;                   /* Espacio entre elementos */
+    gap: 30px;                   /* Increased gap */
+    perspective: 1000px; /* Enable 3D perspective */
 }
 
 
 /* Subcontenedores de servicios */
 .servicio {
-    width: 21%;
-    float: left;
-    margin: 0 1.2%;
+    width: 220px; /* Fixed width better for cards */
+    /* float: left; Removed float, using flex */
+    /* margin: 0 1.2%; */
     background: var(--blanco);
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
 }
 
-#mod1:hover {
+.servicio:hover {
     background: var(--azulmarino);
-    transform: translateY(-8px);
+    transform: translateY(-15px) rotateX(5deg) scale(1.05); /* 3D lift effect */
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
     color: var(--blanco);
 }
 
 
-#mod1:hover .icono-servicio {
+.servicio:hover .icono-servicio {
     color:var(--blanco);
     transform: scale(1.1);
+    animation: floatIcon 1.5s infinite ease-in-out; /* Add floating animation on hover */
 }
 
 
-#mod1:hover p 
+.servicio:hover p 
 {
     color: var(--blanco);
-    transform: scale(1.1);
 }
 
 
-#mod1:hover h3 
+.servicio:hover h3 
 {
     color: var(--blanco);
-    transform: scale(1.1);
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0) scale(1.1); }
+    50% { transform: translateY(-8px) scale(1.1); }
 }
 
 
@@ -401,7 +419,7 @@ font-family: impact;
 
 .servicio h3 {
     margin-bottom: 15px;
-    color: var(--azulmarinoo);
+    color: var(--azulmarino);
     font-size: 1.5rem;
 }
 
@@ -421,8 +439,9 @@ font-family: impact;
 
 .c4{
     max-width: 900px;
-    height: 1400px;
+    height: auto;
     margin: auto;
+    margin-bottom: 50px; /* Add some spacing between sections */
 }
 
 .portfolio-container {
@@ -629,7 +648,7 @@ font-family: impact;
 
 
 /* Opcional: Estilos para el overlay */
-.portfolio-overla2 {
+.portfolio-overlay-web {
     position: absolute;
     top: -35px;
     left: 20px;
@@ -649,7 +668,7 @@ font-family: impact;
     border: 5px var(--amarillo2) solid;
 }
 
-.contproyweb:hover .portfolio-overla2 {
+.contproyweb:hover .portfolio-overlay-web {
     opacity: 1;
 }
 
@@ -661,7 +680,7 @@ font-family: impact;
     margin-bottom: 10px;
 }
 
-.portfolio-overla2 h3 {
+.portfolio-overlay-web h3 {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--blanco);
     font-size: 18px;
@@ -1089,3 +1108,294 @@ footer p {
     color: rgb(16, 11, 11);
     z-index: 0;
 }
+
+/* =========================================
+   NEW PAGES STYLES
+   ========================================= */
+
+/* --- Branding Page --- */
+.branding-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.titulo2{
+ margin-top: 20px;   
+}
+
+.branding-main-logo img {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.color-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.color-card {
+    text-align: center;
+}
+
+.color-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.color-card:hover .color-circle {
+    transform: scale(1.1);
+}
+
+.usage-examples {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.usage-item {
+    width: 300px;
+}
+
+.placeholder-box {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Portfolio Page (Browser Cards) --- */
+.web-projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.browser-card {
+    width: 370px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.browser-card:hover {
+    transform: translateY(-10px);
+}
+
+.browser-header {
+    background: var(--azuloscuro);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.address-bar {
+    background: white;
+    border-radius: 3px;
+    flex-grow: 1;
+    margin-left: 10px;
+    height: 20px;
+    font-size: 10px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.browser-content {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 5px solid var(--azulmarino);
+}
+
+.browser-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 2s ease-in-out; /* Slow scroll effect on hover */
+}
+
+/* Scroll effect on hover */
+.browser-card:hover .browser-content img {
+    transform: translateY(calc(-100% + 200px)); /* Scrolls to bottom */
+}
+
+.browser-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 24, 39, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.browser-card:hover .browser-overlay {
+    opacity: 1;
+}
+
+.btn-visit {
+    background: var(--amarillo2);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.project-info h3 {
+    color: var(--azulmarino);
+    font-size: 18px;
+}
+
+/* --- Active Nav Link --- */
+nav a.active {
+    color: var(--amarillo2);
+    border-bottom: 2px solid var(--amarillo2);
+}
+
+/* --- New Varied Animations --- */
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    60% { opacity: 1; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.visible-zoom {
+    opacity: 1 !important;
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.visible-bounce {
+    opacity: 1 !important;
+    animation: bounceIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Specific delays for timeline items */
+.timeline-item.animate.visible {
+    animation: slideFromLeft 1s ease forwards; /* Default slide */
+}
+
+.timeline-item.animate:nth-child(even).visible {
+    animation: slideFromRight 1s ease forwards; /* Alternating slide */
+}
+
+
+/* Skills zoom effect override */
+.skills.animate.visible {
+    animation: none; /* Disable default fade/slide on container */
+    opacity: 1; /* Make container visible so children can animate */
+}
+
+.skills.animate.visible .iconleng {
+    opacity: 0;
+    animation: zoomIn 0.5s ease forwards;
+}
+
+.skills.animate.visible .iconleng:nth-child(1) { animation-delay: 0.1s; }
+.skills.animate.visible .iconleng:nth-child(2) { animation-delay: 0.2s; }
+.skills.animate.visible .iconleng:nth-child(3) { animation-delay: 0.3s; }
+.skills.animate.visible .iconleng:nth-child(4) { animation-delay: 0.4s; }
+.skills.animate.visible .iconleng:nth-child(5) { animation-delay: 0.5s; }
+.skills.animate.visible .iconleng:nth-child(6) { animation-delay: 0.6s; }
+.skills.animate.visible .iconleng:nth-child(7) { animation-delay: 0.7s; }
+.skills.animate.visible .iconleng:nth-child(8) { animation-delay: 0.8s; }
+
+
+
+    .contact-page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center vertically */
+            gap: 50px;
+            padding: 50px 20px;
+            max-width: 1400px;
+            margin: auto;
+            flex-wrap: wrap;
+            min-height: 80vh; /* Occupy most of the screen height */
+        }
+        .contact-map {
+            flex: 1;
+            min-width: 400px;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            filter: grayscale(100%) invert(92%) contrast(83%); /* Minimalist Light/Dark Style */
+            transition: filter 0.5s;
+        }
+        .contact-map:hover {
+            filter: grayscale(0%);
+        }
+
+        .contact-form-wrapper {
+            flex: 1;
+            min-width: 400px;
+            background: rgba(255,255,255,0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            font-size: 80px;
+            color: var(--amarillo2);
+            animation: floatContact 3s infinite ease-in-out;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        @keyframes floatContact {
+            0%, 100% { transform: translateY(0) rotate(15deg); }
+            50% { transform: translateY(-15px) rotate(15deg); }
+        }
