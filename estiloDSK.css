@@ -1389,7 +1389,7 @@ nav a.active {
             position: absolute;
             top: -20px;
             right: -20px;
-            font-size: 60px;
+            font-size: 40px;
             color: var(--amarillo2);
             animation: floatContact 3s infinite ease-in-out;
             text-shadow: 0 10px 20px rgba(0,0,0,0.2);
@@ -1399,6 +1399,7 @@ nav a.active {
             0%, 100% { transform: translateY(0) rotate(15deg); }
             50% { transform: translateY(-15px) rotate(15deg); }
         }
+
 
 
 
