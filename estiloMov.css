@@ -100,19 +100,19 @@
 
   .serviciotext {
     height: 320px;
-    width: 350px;
+    width: 400px;
     text-align: center;
   }
 
   .servicio {
     width: 200px;
-    height: 230px;
+    height: 255px;
   }
 
   .contenedor-servicios {
     height: auto;
     display: flex;
-    margin-top: 30px;
+    margin-top: 90px;
     justify-content: center;
   }
 
