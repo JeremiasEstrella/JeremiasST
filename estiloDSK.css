@@ -1387,8 +1387,8 @@ nav a.active {
         
         .floating-icon {
             position: absolute;
-            top: -30px;
-            right: -30px;
+            top: -20px;
+            right: -20px;
             font-size: 70px;
             color: var(--amarillo2);
             animation: floatContact 3s infinite ease-in-out;
@@ -1399,4 +1399,5 @@ nav a.active {
             0%, 100% { transform: translateY(0) rotate(15deg); }
             50% { transform: translateY(-15px) rotate(15deg); }
         }
+
 
