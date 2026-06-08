@@ -1,0 +1,23 @@
+INFORMACIÓN IMPORTANTE SOBRE LAS IMÁGENES DE MOCKUPS GENERADAS
+
+Hola, Jeremías. Para el rediseño de tu portafolio, he generado dos imágenes mockup de alta calidad que se integran en los apartados de "XV Años" y "Bodas".
+
+Debido a que la terminal sandbox tiene restricciones del proveedor FileSystem en PowerShell en esta sesión de desarrollo, las imágenes generadas se guardaron de manera segura en la carpeta de la conversación.
+
+Para que las imágenes se muestren correctamente en la página de Portafolio, te pido que realices los siguientes pasos manuales para copiarlas:
+
+1. Ve a esta ruta de tu computadora:
+   C:\Users\yezze\.gemini\antigravity-ide\brain\ec67994f-b7cc-4e3d-93dd-fe77fea52259\
+
+2. Encontrarás dos archivos:
+   - boda_mockup_1780278215820.png
+   - xv_mockup_1780278237645.png
+
+3. Copia estos archivos a la carpeta 'imagenes' de tu proyecto:
+   c:\Users\yezze\OneDrive\Desktop\JeremiasST-main\imagenes\
+
+4. Cámbiales el nombre de la siguiente manera:
+   - boda_mockup_1780278215820.png  =>  boda_mockup.png
+   - xv_mockup_1780278237645.png    =>  xv_mockup.png
+
+¡Eso es todo! Con esto las imágenes se mostrarán perfectamente en las tarjetas de navegador de tu nuevo portafolio.

@@ -36,7 +36,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--azuloscuro);
+    background: var(--azulmarino);
     flex-direction: column;
     opacity: 0;
     pointer-events: none;
@@ -57,7 +57,7 @@
     display: block;
     padding: 10px 50px;
     border-bottom: 2px solid var(--amarillo);
-    background-color: var(--azuloscuro);
+    background-color: var(--azulmarino);
   }
 
   header {
@@ -106,7 +106,7 @@
 
   .servicio {
     width: 200px;
-    height: 270px;
+    height: 255px;
   }
 
   .contenedor-servicios {
@@ -180,13 +180,63 @@
     padding: 10px;
   }
 
-  .iconos2 {
+  .anchonav {
     width: 100%;
-    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .iconos2 a {
-    padding: 10px; /* Espaciado alrededor del texto */
+  .anchoopciones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner {
+    padding: 60px 20px;
+    min-height: 400px;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .banner-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+  .banner-content p {
+    font-size: 1rem;
+  }
+  .recursos {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+    width: 100%;
+  }
+  .recursos img {
+    width: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .footer-left {
+    text-align: center !important;
+  }
+  .footer-right {
+    align-items: center !important;
+  }
+  .iconos2 {
+    justify-content: center !important;
+    margin: 10px auto 0 auto !important;
   }
   footer {
     text-align: center;
@@ -276,5 +326,3 @@
            
         }
 }
-
-

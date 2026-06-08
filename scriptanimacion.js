@@ -49,7 +49,48 @@ document.addEventListener('DOMContentLoaded', function() {
           menu.classList.toggle("show-menu");
       });
   }
+
+  // Initialize 3D Tilt Effect
+  init3dTilt();
 });
+
+// 3D Tilt Card Effect
+function init3dTilt() {
+  const cards = document.querySelectorAll('.tilt-card');
+  
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left; // x position within the element
+      const y = e.clientY - rect.top;  // y position within the element
+      
+      const width = rect.width;
+      const height = rect.height;
+      
+      // Calculate rotation based on cursor position relative to card center
+      // Max rotation of 12 degrees
+      const maxRotate = 12;
+      const rotateY = ((x / width) - 0.5) * maxRotate * 2;
+      const rotateX = -((y / height) - 0.5) * maxRotate * 2;
+      
+      // Apply transform and smooth lighting shadow shift
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.04, 1.04, 1.04)`;
+      
+      // Add subtle inner glow shifting based on pointer
+      const glowX = ((x / width) * 100);
+      const glowY = ((y / height) * 100);
+      card.style.setProperty('--glow-x', `${glowX}%`);
+      card.style.setProperty('--glow-y', `${glowY}%`);
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      // Smoothly reset transformations on mouse leave
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      card.style.setProperty('--glow-x', '50%');
+      card.style.setProperty('--glow-y', '50%');
+    });
+  });
+}
 
 function openModal() {
   document.getElementById("modalForm").style.display = "flex";

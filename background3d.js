@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     particles.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
     particles.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
 
-    // Materials
+    // Particles Materials & Meshes
     const particlesMaterial = new THREE.PointsMaterial({
         size: 0.4, // Slightly larger to see colors better
         vertexColors: true, // Enable vertex colors
@@ -61,14 +61,77 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 0.15
     });
 
-    // Mesh
     const particlesMesh = new THREE.Points(particles, particlesMaterial);
     scene.add(particlesMesh);
 
-    // Lines container
     const linesGeometry = new THREE.BufferGeometry();
     const linesMesh = new THREE.LineSegments(linesGeometry, linesMaterial);
     scene.add(linesMesh);
+
+    // Lights for 3D shapes shading
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0x0cd3c7, 1.0); // Cyan light
+    dirLight.position.set(5, 10, 7);
+    scene.add(dirLight);
+
+    const dirLight2 = new THREE.DirectionalLight(0xfd5660, 0.7); // Red/Orange light
+    dirLight2.position.set(-5, -10, 5);
+    scene.add(dirLight2);
+
+    const dirLight3 = new THREE.DirectionalLight(0xfaaf3b, 0.6); // Gold light
+    dirLight3.position.set(0, 5, -5);
+    scene.add(dirLight3);
+
+    // 3D Floating Geometries (Glassmorphic + Wireframe shapes)
+    const shapesGroup = new THREE.Group();
+    scene.add(shapesGroup);
+
+    const glassMaterial = new THREE.MeshPhongMaterial({
+        color: 0x0CD3C7,
+        transparent: true,
+        opacity: 0.12,
+        shininess: 90,
+        specular: 0xffffff,
+        flatShading: true
+    });
+    const wireMaterial = new THREE.MeshBasicMaterial({
+        color: 0xFAAF3B,
+        transparent: true,
+        opacity: 0.1,
+        wireframe: true
+    });
+
+    // Torus (Doughnut)
+    const torusGeom = new THREE.TorusGeometry(2.5, 0.6, 12, 48);
+    const torusMesh = new THREE.Mesh(torusGeom, glassMaterial);
+    const torusWire = new THREE.Mesh(torusGeom, wireMaterial);
+    const torusGroup = new THREE.Group();
+    torusGroup.add(torusMesh);
+    torusGroup.add(torusWire);
+    torusGroup.position.set(-9, 3, -5);
+    shapesGroup.add(torusGroup);
+
+    // Icosahedron
+    const icoGeom = new THREE.IcosahedronGeometry(2.2, 1);
+    const icoMesh = new THREE.Mesh(icoGeom, glassMaterial);
+    const icoWire = new THREE.Mesh(icoGeom, wireMaterial);
+    const icoGroup = new THREE.Group();
+    icoGroup.add(icoMesh);
+    icoGroup.add(icoWire);
+    icoGroup.position.set(9, -4, -4);
+    shapesGroup.add(icoGroup);
+
+    // Octahedron
+    const octGeom = new THREE.OctahedronGeometry(2, 0);
+    const octMesh = new THREE.Mesh(octGeom, glassMaterial);
+    const octWire = new THREE.Mesh(octGeom, wireMaterial);
+    const octGroup = new THREE.Group();
+    octGroup.add(octMesh);
+    octGroup.add(octWire);
+    octGroup.position.set(3, 7, -8);
+    shapesGroup.add(octGroup);
 
     camera.position.z = 15;
 
@@ -85,6 +148,12 @@ document.addEventListener('DOMContentLoaded', () => {
         mouseY = (event.clientY - windowHalfY);
     });
 
+    // Scroll tracking for parallax
+    let scrollY = 0;
+    window.addEventListener('scroll', () => {
+        scrollY = window.scrollY;
+    });
+
     // Animation Loop
     function animate() {
         requestAnimationFrame(animate);
@@ -93,8 +162,34 @@ document.addEventListener('DOMContentLoaded', () => {
         targetY = mouseY * 0.0005;
 
         // Rotate entire scene slightly based on mouse
-        particlesMesh.rotation.y += 0.002;
-        particlesMesh.rotation.x += 0.001;
+        particlesMesh.rotation.y += 0.0015;
+        particlesMesh.rotation.x += 0.0008;
+
+        // Rotate and float 3D shapes
+        const time = Date.now() * 0.001;
+        torusGroup.rotation.x += 0.002;
+        torusGroup.rotation.y += 0.003;
+        torusGroup.position.y = 3 + Math.sin(time * 0.5) * 0.5;
+
+        icoGroup.rotation.x += 0.003;
+        icoGroup.rotation.z += 0.002;
+        icoGroup.position.y = -4 + Math.cos(time * 0.4) * 0.4;
+
+        octGroup.rotation.y += 0.002;
+        octGroup.rotation.z += 0.004;
+        octGroup.position.y = 7 + Math.sin(time * 0.6) * 0.65;
+
+        // Smooth scroll camera parallax
+        const targetCamY = -scrollY * 0.008;
+        const targetCamZ = 15 + scrollY * 0.003;
+        camera.position.y += (targetCamY - camera.position.y) * 0.05;
+        camera.position.z += (targetCamZ - camera.position.z) * 0.05;
+
+        // Rotate camera slightly based on mouse
+        camera.position.x += (mouseX * 0.005 - camera.position.x) * 0.05;
+
+        // Make camera look at center of the scroll area
+        camera.lookAt(0, camera.position.y * 0.5, 0);
         
         // Update particles position
         const positions = particles.attributes.position.array;

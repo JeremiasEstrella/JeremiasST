@@ -11,12 +11,7 @@ body {
   background-color: var(--azuloscuro);
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom, var(--azulmarino), var(--azuloscuro));
-}
+
 
 .primerconacer {
   width: 100%;
@@ -55,19 +50,20 @@ header {
 }
 
 .imagenperfil {
-  background-color: var(--azulmarino);
-  width: 70%;
+  background-color: transparent;
+  width: 90%;
   height: auto;
   display: flex;
   margin: auto;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px 0;
 }
 .textoperfil {
-  background-color: var(--azulmarino);
-  width: 70%;
+  background-color: transparent;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -79,8 +75,6 @@ header {
   color: var(--blanco);
   font-size: 15px;
   text-align: center;
-  border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 .cshar {
   width: 69%;
@@ -114,11 +108,17 @@ header {
   width: 32%;
   display: grid;
   margin: auto;
-  padding: 2px;
+  padding: 15px;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
+.timeline-item .content {
+  padding: 20px;
+  border-radius: 12px;
+}
+
 .textoacerca h2 {
   display: flex;
   align-items: center;
